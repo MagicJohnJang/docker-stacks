@@ -39,7 +39,6 @@ RUN python -m spylon_kernel install --sys-prefix
 # for PA team
 USER root
 
-RUN pip install --upgrade pip
 RUN pip install jupyter_contrib_nbextensions
     pip install pyssml
 	
