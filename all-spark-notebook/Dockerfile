@@ -40,11 +40,11 @@ RUN python -m spylon_kernel install --sys-prefix
 RUN pip --no-cache-dir install https://github.com/ipython-contrib/jupyter_contrib_nbextensions/tarball/master
     pip --no-cache-dir install https://github.com/sumsted/pyssml/tarball/master
     
-USER root
-	
 RUN mkdir -p /work
 
 VOLUME /work
 WORKDIR /work
 
 EXPOSE 9900
+
+USER root
