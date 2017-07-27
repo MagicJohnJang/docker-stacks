@@ -44,6 +44,7 @@ USER root
 
 CMD ["start-singleuser-pa.sh"]
 COPY start-singleuser-pa.sh /usr/local/bin/
+RUN chown -R $NB_USER:users /usr/local/bin/
 
 USER $NB_USER
 
