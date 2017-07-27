@@ -39,8 +39,7 @@ RUN python -m spylon_kernel install --sys-prefix
 # for PA team
 USER root
 
-RUN pip --no-cache-dir install https://github.com/ipython-contrib/jupyter_contrib_nbextensions/tarball/master
-    pip --no-cache-dir install https://github.com/sumsted/pyssml/tarball/master
+
 	
 RUN mkdir -p /work
 
