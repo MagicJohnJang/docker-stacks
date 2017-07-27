@@ -37,8 +37,7 @@ RUN conda install --quiet --yes 'spylon-kernel=0.4*' && \
 RUN python -m spylon_kernel install --sys-prefix
 
 # for PA team
-RUN pip --no-cache-dir install https://github.com/ipython-contrib/jupyter_contrib_nbextensions/tarball/master
-    pip --no-cache-dir install https://github.com/sumsted/pyssml/tarball/master
+RUN pip --no-cache-dir install https://pypi.python.org/packages/81/c0/3c4e7b93aa4ef1edfde557065991c5f460cca54981fd562652bd80054612/pyssml-0.1.3.tar.gz
     
 RUN mkdir -p /work
 
