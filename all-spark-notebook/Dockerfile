@@ -35,3 +35,17 @@ RUN jupyter toree install --sys-prefix
 RUN conda install --quiet --yes 'spylon-kernel=0.4*' && \
     conda clean -tipsy
 RUN python -m spylon_kernel install --sys-prefix
+
+# for PA team
+USER root
+
+RUN pip install --upgrade pip
+RUN pip install jupyter_contrib_nbextensions
+    pip install pyssml
+	
+RUN mkdir -p /work
+
+VOLUME /work
+WORKDIR /work
+
+EXPOSE 9900
