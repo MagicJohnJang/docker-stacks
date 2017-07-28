@@ -42,6 +42,7 @@ RUN pip --no-cache-dir install https://pypi.python.org/packages/81/c0/3c4e7b93aa
 
 USER root
 
+ENTRYPOINT ["tini", "--"]
 CMD ["start-singleuser-pa.sh"]
 COPY start-singleuser-pa.sh /usr/local/bin/
 RUN chown -R $NB_USER:users /usr/local/bin/
