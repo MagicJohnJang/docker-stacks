@@ -21,6 +21,6 @@ CMD ["start-singleuser-pa.sh"]
 
 COPY start-singleuser-pa.sh /usr/local/bin/
 RUN chown -R $NB_USER:users /usr/local/bin/
-RUN chown -R $NB_USER /usr/local/bin/start-singleuser-pa.sh
+RUN chmod 755 /usr/local/bin/start-singleuser-pa.sh
 
 USER $NB_USER
