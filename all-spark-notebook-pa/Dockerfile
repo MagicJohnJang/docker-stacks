@@ -17,10 +17,10 @@ WORKDIR $HOME
 VOLUME $HOME/work
 
 ENTRYPOINT ["tini", "--"]
-CMD ["start-singleuser-pa.sh"]
+CMD ["start-notebook-pa.sh"]
 
-COPY start-singleuser-pa.sh /usr/local/bin/
+COPY start-notebook-pa.sh /usr/local/bin/
 RUN chown -R $NB_USER:users /usr/local/bin/
-RUN chmod 755 /usr/local/bin/start-singleuser-pa.sh
+RUN chmod 755 /usr/local/bin/start-notebook-pa.sh
 
 USER $NB_USER
