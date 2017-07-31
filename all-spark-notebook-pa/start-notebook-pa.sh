@@ -12,7 +12,6 @@ else
   . /usr/local/bin/start.sh jupyter notebook \
   --port=${JPY_PORT:-8888} \
   --ip=0.0.0.0 \
-  --user=$JPY_USER \
   --allow-root \
   --NotebookApp.iopub_data_rate_limit=2147483647 \
   ${notebook_arg} \
