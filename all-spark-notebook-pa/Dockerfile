@@ -5,7 +5,8 @@ FROM jupyter/all-spark-notebook
 
 MAINTAINER Jupyter Project <jupyter@googlegroups.com>
 
-USER $NB_USER
+#USER $NB_USER
+USER root
 
 # Update package management tool first
 RUN apt-get update
@@ -18,7 +19,7 @@ RUN pip --no-cache-dir install https://pypi.python.org/packages/81/c0/3c4e7b93aa
 RUN apt-get install -y freetds-dev
 RUN pip --no-cache-dir install pymssql
 
-USER root
+#USER root
 
 WORKDIR $HOME
 VOLUME $HOME/work
